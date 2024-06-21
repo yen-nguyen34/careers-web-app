@@ -6,12 +6,19 @@
       for everyone
     </h1>
     <h2 class="text-3xl font-light">Find your next job at Bobo Corp.</h2>
+    <div class="mb-4">
+      <SearchJobForm />
+    </div>
   </section>
 </template>
-  
-  <script>
+
+<script>
+import SearchJobForm from "./SearchJobForm.vue";
 export default {
   name: "TheHeadLine",
+  components: {
+    SearchJobForm,
+  },
   data() {
     return {
       action: "Build",
@@ -21,7 +28,10 @@ export default {
   computed: {
     actionClasses() {
       return {
-        [this.action.toLowerCase()]: true,
+        build: this.action.toLowerCase() === "build",
+        create: this.action.toLowerCase() === "create",
+        design: this.action.toLowerCase() === "design",
+        code: this.action.toLowerCase() === "code",
       };
     },
   },
@@ -33,16 +43,19 @@ export default {
   },
   methods: {
     changeTitle() {
+      let index = 0;
+      const actions = ["Build", "Create", "Design", "Code"];
       this.interval = setInterval(() => {
-        const actions = ["Build", "Create", "Design", "Code"];
-        this.action = nextElementInList(actions, this.action);
+        this.action = actions[index];
+        console.log(index, this.action);
+        index = (index + 1) % actions.length;
       }, 3000);
     },
   },
 };
 </script>
-  
-  <style scoped>
+
+<style scoped>
 .build {
   color: #1a73e8;
 }
@@ -59,4 +72,3 @@ export default {
   color: #d93025;
 }
 </style>
-  

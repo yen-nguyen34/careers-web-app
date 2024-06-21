@@ -30,18 +30,24 @@
       <TheSubNav />
     </div>
   </header>
+
+  <main class="mt-36">
+    <TheHero />
+  </main>
 </template>
 
 <script>
 import ActionButton from "./ActionButton.vue";
 import ProfileImage from "./ProfileImage.vue";
 import TheSubNav from "./TheSubNav.vue";
+import TheHero from "./TheHero.vue";
 export default {
   name: "MainNav",
   components: {
     ActionButton,
     ProfileImage,
     TheSubNav,
+    TheHero,
   },
   data() {
     return {
