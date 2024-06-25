@@ -1,10 +1,9 @@
 <script setup>
-import MainNav from './components/MainNav.vue';
+import MainNav from "./components/Navigation/MainNav.vue";
 </script>
 
 <template>
-  <MainNav/>
+  <MainNav />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

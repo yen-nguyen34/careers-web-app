@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import ActionButton from "./ActionButton.vue";
+import ActionButton from "../Shared/ActionButton.vue";
 import ProfileImage from "./ProfileImage.vue";
 import TheSubNav from "./TheSubNav.vue";
-import TheHero from "./TheHero.vue";
+import TheHero from "../SearchJob/TheHero.vue";
 export default {
   name: "MainNav",
   components: {

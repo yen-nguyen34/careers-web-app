@@ -13,7 +13,7 @@
 
 <script>
 import profileImg from "../assets/human.png";
-import ProfileInfo from "./ProfileInfo.vue";
+import ProfileInfo from "../Shared/ProfileInfo.vue";
 export default {
   name: "ProfileImage",
   components: {
